@@ -5,7 +5,7 @@ const port = 3002;
 
 app.use(express.json());
 
-app.use("/api", userRoutes);
+app.use("/", userRoutes);
 
 app.listen(port, ()=>{
     console.log(`user server running on port ${port}`)

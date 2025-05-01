@@ -4,8 +4,8 @@ import UserController from "../controllers/userController";
 
 const router = express.Router();
 const userController = new UserController();
-
-router.get('/healthcheck', tenantMiddleware, userController.healthCheck);
+const baseUrl = "/api/v1/users/";
+router.get(`${baseUrl}healthcheck`, tenantMiddleware, userController.healthCheck);
 
 
 export default router;
